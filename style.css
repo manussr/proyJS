@@ -1,5 +1,10 @@
 h1 {
     text-align: center;
+    font-family: fantasy;
+}
+
+body {
+    padding: 0em 10em 0em 10em;
 }
 
 form {
@@ -9,8 +14,30 @@ form {
 button {
     margin: 1em;
     padding: .5em 2em .5em 2em;
+    border-radius: 1em;
+    color: white;
+    background-color: black;
 }
 
 input {
     padding: 0.5em;
+    border-radius: 0.5em;
+}
+
+table {
+    border: 1px solid black;
+    margin: 0 auto;
+    padding: 1em 10em 1em 10em;
+}
+
+ul {
+    text-align: center;
+    border: 1px solid black;
+    margin-top: 2em;
+    padding: 1em;
+}
+
+li {
+    list-style: none;
+    text-align: center;
 }
