@@ -24,13 +24,28 @@ function createTask(task){
     return item;
 }
 
+// Añade una tarea
 function addTask(text){
     var listItem = createTask(text);
+    bindEvents(listItem);
     var taskList = document.getElementsByTagName('ul')[0];
     taskList.insertBefore(listItem, taskList.childNodes[0]);
     inputField.value = '';
 }
 
+// Elimina una tarea
+function deleteTask(){
+    var item = this.parentNode;
+    var taskList = item.parentNode;
+    taskList.removeChild(item);
+}
+
+// Asigna los eventos a los elementos
+function bindEvents(listItem){
+    var checkBox = listItem.querySelector("input[type='checkbox']");
+    var deleteButton = listItem.querySelector('button');
+    deleteButton.addEventListener('click', deleteTask);
+}
 
 //Crear Titulo
 document.body.appendChild(createNode('h1', 'TO DO APP'));
