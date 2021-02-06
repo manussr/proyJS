@@ -1,5 +1,14 @@
 h1 {
     text-align: center;
+    font-family: fantasy;
+    font-variant: small-caps;
+    text-shadow: 3px 3px 1px rgb(182, 182, 182);
+    letter-spacing: 0.1em;
+    font-size: 3em;
+}
+
+body {
+    padding: 0em 25em 0em 25em;
 }
 
 form {
@@ -7,10 +16,53 @@ form {
 }
 
 button {
+    color: #494949 !important;
+    text-decoration: none;
+    background: #ffffff;
+    padding: .5em 6em .5em 6em;
+    border: 2px solid #494949 !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
     margin: 1em;
-    padding: .5em 2em .5em 2em;
+}
+
+button:hover {
+    color: #ffffff !important;
+    background: black;
+    border-color: black !important;
+    transition: all 0.4s ease 0s;
 }
 
 input {
     padding: 0.5em;
+    width: 35em;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 2px solid black;
+}
+
+ul {
+    text-align: center;
+    border: 2px solid black;
+    margin-top: 2em;
+    padding: 1em;
+}
+
+li {
+    list-style: none;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-size: small;
+    font-weight: Bold;
+    color: #Ab2e46;
+    background-color: #F48989;
+    padding: 1em;
+    font-family: sans-serif;
 }
