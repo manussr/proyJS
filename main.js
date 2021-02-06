@@ -40,11 +40,19 @@ function deleteTask(){
     taskList.removeChild(item);
 }
 
+// Completar tarea 
+function completeTask(){
+    var item = this.parentNode;
+    var isChecked = item.querySelector("input[type='checkbox']").checked;
+    item.querySelector('label').style.textDecorationLine = isChecked?'line-through':'none';
+}
+
 // Asigna los eventos a los elementos
 function bindEvents(listItem){
     var checkBox = listItem.querySelector("input[type='checkbox']");
     var deleteButton = listItem.querySelector('button');
     deleteButton.addEventListener('click', deleteTask);
+    checkBox.addEventListener('change', completeTask);
 }
 
 //Crear Titulo
