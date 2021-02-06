@@ -66,3 +66,13 @@ h2 {
     padding: 1em;
     font-family: sans-serif;
 }
+
+li div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-b;
+}
+
+div button{
+    margin-top: 0;   
+}

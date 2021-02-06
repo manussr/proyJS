@@ -9,15 +9,17 @@ function createNode(type, child) {
 // Crea un nodo para la tarea
 function createTask(task){
     var item = document.createElement('li');
+    var wrapper = document.createElement('div');
     var checkBox = document.createElement('input');
     var label = createNode('label', task);
     var deleteButton = createNode('button', 'Delete');
     //
     checkBox.setAttribute('type','checkbox');
     //
-    item.appendChild(checkBox);
-    item.appendChild(label);
-    item.appendChild(deleteButton);
+    wrapper.appendChild(checkBox);
+    wrapper.appendChild(label);
+    wrapper.appendChild(deleteButton);
+    item.appendChild(wrapper);
     //
     return item;
 }
