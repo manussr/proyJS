@@ -70,7 +70,7 @@ h2 {
 li div{
     display: flex;
     flex-direction: row;
-    justify-content: space-b;
+    justify-content: space-between;
 }
 
 div button{
