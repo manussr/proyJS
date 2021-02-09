@@ -7,9 +7,10 @@ h1 {
     font-size: 3em;
 }
 
-body {
+
+/*body {
     padding: 0em 25em 0em 25em;
-}
+}*/
 
 form {
     text-align: center;
@@ -19,11 +20,12 @@ button {
     color: #494949 !important;
     text-decoration: none;
     background: #ffffff;
-    padding: .5em 6em .5em 6em;
+    padding: .5rem 6rem .5rem 6rem;
     border: 2px solid #494949 !important;
     display: inline-block;
     transition: all 0.4s ease 0s;
-    margin: 1em;
+    margin: 1rem;
+    width: 25%;
 }
 
 button:hover {
@@ -34,8 +36,8 @@ button:hover {
 }
 
 input {
-    padding: 0.5em;
-    width: 35em;
+    padding: 0.5rem;
+    width: 25%;
     border: none;
     border-bottom: 1px solid black;
 }
@@ -48,13 +50,16 @@ input:focus {
 ul {
     text-align: center;
     border: 2px solid black;
-    margin-top: 2em;
-    padding: 1em;
+    padding: 1rem;
+    margin: 2rem 0rem 0.5rem 0rem;
+    width: 50%;
+    margin: 2rem auto 0rem auto;
 }
 
 li {
     list-style: none;
     text-align: center;
+    margin: 0rem auto 0rem auto;
 }
 
 h2 {
@@ -63,16 +68,31 @@ h2 {
     font-weight: Bold;
     color: #Ab2e46;
     background-color: #F48989;
-    padding: 1em;
+    padding: 1rem;
     font-family: sans-serif;
 }
 
-li div{
+li div {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
 }
 
-div button{
-    margin-top: 0;   
+div button {
+    padding: .5rem 2rem .5rem 2rem;
+    vertical-align: middle;
+    margin: 1rem auto 1rem auto;
+}
+
+input[type="checkbox"] {
+    width: 1rem;
+    padding: 0rem;
+    margin: auto;
+    vertical-align: middle;
+}
+
+div label {
+    margin: auto;
 }

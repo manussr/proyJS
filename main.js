@@ -7,14 +7,14 @@ function createNode(type, child) {
 }
 
 // Crea un nodo para la tarea
-function createTask(task){
+function createTask(task) {
     var item = document.createElement('li');
     var wrapper = document.createElement('div');
     var checkBox = document.createElement('input');
     var label = createNode('label', task);
     var deleteButton = createNode('button', 'Delete');
     //
-    checkBox.setAttribute('type','checkbox');
+    checkBox.setAttribute('type', 'checkbox');
     //
     wrapper.appendChild(checkBox);
     wrapper.appendChild(label);
@@ -25,7 +25,7 @@ function createTask(task){
 }
 
 // Añade una tarea
-function addTask(text){
+function addTask(text) {
     var listItem = createTask(text);
     bindEvents(listItem);
     var taskList = document.getElementsByTagName('ul')[0];
@@ -34,21 +34,21 @@ function addTask(text){
 }
 
 // Elimina una tarea
-function deleteTask(){
+function deleteTask() {
     var item = this.parentNode;
     var taskList = item.parentNode;
     taskList.removeChild(item);
 }
 
 // Completar tarea 
-function completeTask(){
+function completeTask() {
     var item = this.parentNode;
     var isChecked = item.querySelector("input[type='checkbox']").checked;
-    item.querySelector('label').style.textDecorationLine = isChecked?'line-through':'none';
+    item.querySelector('label').style.textDecorationLine = isChecked ? 'line-through' : 'none';
 }
 
 // Asigna los eventos a los elementos
-function bindEvents(listItem){
+function bindEvents(listItem) {
     var checkBox = listItem.querySelector("input[type='checkbox']");
     var deleteButton = listItem.querySelector('button');
     deleteButton.addEventListener('click', deleteTask);
@@ -89,9 +89,21 @@ function cmpButton(event) {
         var h2 = document.body.appendChild(createNode('h2', '↓ Error: Campo Vacio ↓'));
         tableList = document.getElementsByTagName('form')[0];
         document.body.insertBefore(h2, tableList);
-    }else{
+    } else {
+        inputField.setAttribute('style', 'border-bottom: 2px solid black;');
         addTask(inputField.value);
     }
 }
+
+//Evento Tecla Enter en Input
+var actInput = document.getElementsByTagName('INPUT')[0];
+actInput.addEventListener("keydown", function(event) {
+    if (event.key == "Enter") {
+        event.preventDefault();
+        cmpButton(event);
+    }
+});
+
+
 //Declaracion de Evento 
 actButton.addEventListener("click", cmpButton);
