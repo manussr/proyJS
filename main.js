@@ -94,5 +94,16 @@ function cmpButton(event) {
         addTask(inputField.value);
     }
 }
+
+//Evento Tecla Enter en Input
+var actInput = document.getElementsByTagName('INPUT')[0];
+actInput.addEventListener("keydown", function(event) {
+    if (event.key == "Enter") {
+        event.preventDefault();
+        cmpButton(event);
+    }
+});
+
+
 //Declaracion de Evento 
 actButton.addEventListener("click", cmpButton);
